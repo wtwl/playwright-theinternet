@@ -1,0 +1,6 @@
+"login type","username","password","message"
+"invalid password","tomsmith","invalidpass","Your password is invalid!"
+"blank password","tomsmith","","Your password is invalid!"
+"invalid username","invalidname","SuperSecretPassword!","Your username is invalid!"
+"blank username","","SuperSecretPassword!","Your username is invalid!"
+"blank username and password","","","Your username is invalid!"
