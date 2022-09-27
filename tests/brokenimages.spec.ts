@@ -3,7 +3,6 @@ import { BrokenImagesPage } from "../pageobjects/brokenimagespage";
 
 
 test.describe("", () => {
-    // TODO: add accessebility test 
     test("Should return status OK for images source call", async ({page, request}) => {
         const brokenImagesPage: BrokenImagesPage = new BrokenImagesPage(page);
 
@@ -19,7 +18,7 @@ test.describe("", () => {
         }
     });
 
-    test("Accesebility. Images gould have alt attribute", async ( {page} ) => {
+    test("Accesebility. Images sould have alt attribute", async ( {page} ) => {
         const brokenImagesPage: BrokenImagesPage = new BrokenImagesPage(page);
 
         await brokenImagesPage.goto();
