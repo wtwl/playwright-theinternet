@@ -7,7 +7,7 @@ test("Should call js dialog", async ({page}) => {
     
     page.on("dialog", async dialog => {
         expect.soft(dialog.type()).toBe("alert");
-        expect.soft(dialog.message).toBe("You seleted a context menu");
+        expect.soft(dialog.message()).toBe("You seleted a context menu");
 
         await dialog.dismiss();
     });
