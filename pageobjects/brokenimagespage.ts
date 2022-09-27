@@ -1,8 +1,8 @@
 import { Page } from "@playwright/test";
 import { WebPage } from "./webpage";
 
-export class BrokenImages extends WebPage {
-    private readonly imagesLocator: string = "//div[@class='example']//img";
+export class BrokenImagesPage extends WebPage {
+    private readonly _imagesLocator: string = "//div[@class='example']//img";
 
     constructor(page: Page) {
         super(page);
@@ -12,8 +12,12 @@ export class BrokenImages extends WebPage {
         await this.page.goto("broken_images");
     }
 
+    public async getImagesElements() {
+        return this.page.locator(this._imagesLocator);
+    }
+
     public async getImagesSource() {
-        const images = await this.page.$$(this.imagesLocator);
+        const images = await this.page.$$(this._imagesLocator);
         const sources: string[] = [];
 
         for (const image of images) {
