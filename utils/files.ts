@@ -11,4 +11,13 @@ export class FilesUtils {
         });
         return records;    
     }
+
+    public static isFileExist = async function (filePath: string) {
+        return !!(await fs.promises.stat(filePath).catch(e => false));
+    }
+
+
+    public static removeDirectory(directoryPath: string) {
+        fs.rmSync(directoryPath, { recursive: true, force: true });
+    }
 }
