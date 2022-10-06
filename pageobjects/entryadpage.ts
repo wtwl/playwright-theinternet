@@ -6,13 +6,15 @@ export class EntryAdPage extends WebPage {
     // Modal
     private readonly _modalWindow: Locator;
 
-    public get modalWindow(): Locator {
-        return this._modalWindow;
-    }
+
     private readonly _modalBodyMessage: Locator;
 
     public get modalBodyMessage(): Locator {
         return this._modalBodyMessage;
+    }
+
+    public get modalWindow(): Locator {
+        return this._modalWindow;
     }
 
     private readonly modalWindowCloseButton: Locator;

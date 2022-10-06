@@ -5,22 +5,31 @@ import { WebPage } from './webpage';
 type Button = "Remove" | "Add" | "Disable" | "Enable";
 
 export class DynamicElementsPage extends WebPage {
+
     private readonly _checkbox: Locator;
-    public get checkbox(): Locator {
-        return this._checkbox;
-    }
+
     private readonly _input: Locator;
-    public get input(): Locator {
-        return this._input;
-    }
+
     private readonly _checkboxLoader: Locator;
 
     private readonly inputLoader: Locator;
+
     private readonly _checkboxMessage: Locator;
+
+    private readonly _inputMessage: Locator;
+
+    public get input(): Locator {
+        return this._input;
+    }
+
     public get checkboxMessage(): Locator {
         return this._checkboxMessage;
     }
-    private readonly _inputMessage: Locator;
+    
+    public get checkbox(): Locator {
+        return this._checkbox;
+    }
+
     public get inputMessage(): Locator {
         return this._inputMessage;
     }
